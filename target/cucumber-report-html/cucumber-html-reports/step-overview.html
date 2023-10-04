@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Web Automation</td>
+                          <td>1</td>
+                        <td>04 Oct 2023, 15:54</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.AddRemoveElement.user_click_add_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="3165508700">3s 165ms</td>
+                <td class="duration" data-value="3165508700">3s 165ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.AddRemoveElement.user_deleted_added_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="42170503400">42s 170ms</td>
+                <td class="duration" data-value="42170503400">42s 170ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.AddRemoveElement.user_on_the_home_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="2460463700">2s 460ms</td>
+                <td class="duration" data-value="2460463700">2s 460ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.AddRemoveElement.user_select_the_add_remove_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2561537100">2s 561ms</td>
+                <td class="duration" data-value="2561537100">2s 561ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ContextMenu.get_alert_message()</td>
+                <td>1</td>
+                <td class="duration" data-value="3048318500">3s 048ms</td>
+                <td class="duration" data-value="3048318500">3s 048ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ContextMenu.user_click_hot_spot()</td>
+                <td>1</td>
+                <td class="duration" data-value="2220781900">2s 220ms</td>
+                <td class="duration" data-value="2220781900">2s 220ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ContextMenu.user_on_the_main_page_for_navigate_to_context_menu()</td>
+                <td>1</td>
+                <td class="duration" data-value="2411976300">2s 411ms</td>
+                <td class="duration" data-value="2411976300">2s 411ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ContextMenu.user_select_the_context_menu_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2523786500">2s 523ms</td>
+                <td class="duration" data-value="2523786500">2s 523ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Dropdown.get_user_selected_options()</td>
+                <td>1</td>
+                <td class="duration" data-value="3198752800">3s 198ms</td>
+                <td class="duration" data-value="3198752800">3s 198ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Dropdown.user_on_the_main_page_for_navigate_to_dropdown()</td>
+                <td>1</td>
+                <td class="duration" data-value="2381783900">2s 381ms</td>
+                <td class="duration" data-value="2381783900">2s 381ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Dropdown.user_select_from_dropdown()</td>
+                <td>1</td>
+                <td class="duration" data-value="2174723300">2s 174ms</td>
+                <td class="duration" data-value="2174723300">2s 174ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Dropdown.user_select_the_dropdown_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2594827300">2s 594ms</td>
+                <td class="duration" data-value="2594827300">2s 594ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FileUpload.user_on_the_main_page_for_navigate_to_file_upload()</td>
+                <td>1</td>
+                <td class="duration" data-value="2427358000">2s 427ms</td>
+                <td class="duration" data-value="2427358000">2s 427ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FileUpload.user_select_the_file_upload_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="3136280300">3s 136ms</td>
+                <td class="duration" data-value="3136280300">3s 136ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FileUpload.user_upload_file()</td>
+                <td>1</td>
+                <td class="duration" data-value="9079805100">9s 079ms</td>
+                <td class="duration" data-value="9079805100">9s 079ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ForgotPassword.user_click_submit()</td>
+                <td>1</td>
+                <td class="duration" data-value="2510066500">2s 510ms</td>
+                <td class="duration" data-value="2510066500">2s 510ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ForgotPassword.user_fill_in_email_with(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="2148808400">2s 148ms</td>
+                <td class="duration" data-value="2148808400">2s 148ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ForgotPassword.user_on_the_main_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="2407227300">2s 407ms</td>
+                <td class="duration" data-value="2407227300">2s 407ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.ForgotPassword.user_select_the_forgot_password_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2548569200">2s 548ms</td>
+                <td class="duration" data-value="2548569200">2s 548ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.browser_is_open()</td>
+                <td>1</td>
+                <td class="duration" data-value="2265017800">2s 265ms</td>
+                <td class="duration" data-value="2265017800">2s 265ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.hits_login()</td>
+                <td>1</td>
+                <td class="duration" data-value="2708637300">2s 708ms</td>
+                <td class="duration" data-value="2708637300">2s 708ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.user_fill_in_password_with(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="2234469100">2s 234ms</td>
+                <td class="duration" data-value="2234469100">2s 234ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.user_fill_in_user_name_with(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="2140170400">2s 140ms</td>
+                <td class="duration" data-value="2140170400">2s 140ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.user_is_navigated_to_the_secure_area()</td>
+                <td>1</td>
+                <td class="duration" data-value="2099720500">2s 099ms</td>
+                <td class="duration" data-value="2099720500">2s 099ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.user_navigate_back_to_the_home_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="2024229100">2s 024ms</td>
+                <td class="duration" data-value="2024229100">2s 024ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.user_select_the_form_authentication()</td>
+                <td>1</td>
+                <td class="duration" data-value="8622671100">8s 622ms</td>
+                <td class="duration" data-value="8622671100">8s 622ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.FormAuthentication.user_sign_out_from_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="844348100">844ms</td>
+                <td class="duration" data-value="844348100">844ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.HorizontalSlider.user_on_the_main_page_for_navigate_to_horizontal_slider()</td>
+                <td>1</td>
+                <td class="duration" data-value="2424233500">2s 424ms</td>
+                <td class="duration" data-value="2424233500">2s 424ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.HorizontalSlider.user_select_the_horizontal_slider_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2494295400">2s 494ms</td>
+                <td class="duration" data-value="2494295400">2s 494ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.HorizontalSlider.user_set_slider_range()</td>
+                <td>1</td>
+                <td class="duration" data-value="1378914700">1s 378ms</td>
+                <td class="duration" data-value="1378914700">1s 378ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hovers.user_hover_over_figure_to_get_caption()</td>
+                <td>1</td>
+                <td class="duration" data-value="6465442200">6s 465ms</td>
+                <td class="duration" data-value="6465442200">6s 465ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hovers.user_on_the_main_page_for_navigate_to_hovers()</td>
+                <td>1</td>
+                <td class="duration" data-value="2358254500">2s 358ms</td>
+                <td class="duration" data-value="2358254500">2s 358ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.Hovers.user_select_the_hovers_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2668798800">2s 668ms</td>
+                <td class="duration" data-value="2668798800">2s 668ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.dismiss_prompt()</td>
+                <td>1</td>
+                <td class="duration" data-value="4142104400">4s 142ms</td>
+                <td class="duration" data-value="4142104400">4s 142ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.test_confirm_accept()</td>
+                <td>1</td>
+                <td class="duration" data-value="4167966400">4s 167ms</td>
+                <td class="duration" data-value="4167966400">4s 167ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.test_prompt()</td>
+                <td>1</td>
+                <td class="duration" data-value="5202650100">5s 202ms</td>
+                <td class="duration" data-value="5202650100">5s 202ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.user_on_the_main_page_for_navigate_to_java_script_alerts()</td>
+                <td>1</td>
+                <td class="duration" data-value="2388319600">2s 388ms</td>
+                <td class="duration" data-value="2388319600">2s 388ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.user_select_the_java_script_alerts_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2586393900">2s 586ms</td>
+                <td class="duration" data-value="2586393900">2s 586ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.user_test_alert()</td>
+                <td>1</td>
+                <td class="duration" data-value="4249895300">4s 249ms</td>
+                <td class="duration" data-value="4249895300">4s 249ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.JavaScriptAlerts.user_test_confirm()</td>
+                <td>1</td>
+                <td class="duration" data-value="4145006400">4s 145ms</td>
+                <td class="duration" data-value="4145006400">4s 145ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.KeyPresses.user_on_the_main_page_for_navigate_to_key_presses()</td>
+                <td>1</td>
+                <td class="duration" data-value="2372149500">2s 372ms</td>
+                <td class="duration" data-value="2372149500">2s 372ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.KeyPresses.user_select_the_key_presses_element()</td>
+                <td>1</td>
+                <td class="duration" data-value="2744976100">2s 744ms</td>
+                <td class="duration" data-value="2744976100">2s 744ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.KeyPresses.user_test_back_space()</td>
+                <td>1</td>
+                <td class="duration" data-value="3235757500">3s 235ms</td>
+                <td class="duration" data-value="3235757500">3s 235ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.KeyPresses.user_test_pi()</td>
+                <td>1</td>
+                <td class="duration" data-value="3217127800">3s 217ms</td>
+                <td class="duration" data-value="3217127800">3s 217ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>44</td>
+              <td>44</td>
+              <td class="duration">2m 54s 352ms</td>
+              <td class="duration">3s 962ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

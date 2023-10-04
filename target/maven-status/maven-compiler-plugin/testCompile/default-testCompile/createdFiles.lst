@@ -1,0 +1,12 @@
+StepDefinitions\AddRemoveElement.class
+StepDefinitions\FormAuthentication.class
+StepDefinitions\HorizontalSlider.class
+StepDefinitions\FileUpload.class
+StepDefinitions\Hovers.class
+StepDefinitions\BaseClass.class
+StepDefinitions\ForgotPassword.class
+StepDefinitions\KeyPresses.class
+StepDefinitions\ContextMenu.class
+Runner\Run.class
+StepDefinitions\Dropdown.class
+StepDefinitions\JavaScriptAlerts.class
